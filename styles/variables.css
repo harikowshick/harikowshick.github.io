@@ -1,0 +1,17 @@
+html {
+    /* --box-shadow: 8px -8px 16px 4px #000; */
+    --box-shadow: 5px 2px 16px -4px rgba(0,0, 0, 0.5);
+    --box-shadow-inset: inset 1px -13px 13px -18px rgba(0,0, 0, 0.5);
+    --black: #292929;
+    --grey: #595959;
+    /* --dark-blue: #9CBAC9; */
+    --dark-blue: #00334b;
+    --blue: #8fb2c1;
+    --light-blue: #ebfbfb;
+
+    --black-text: var(--black);
+    --grey-text: var(--grey);
+    --cta: var(--dark-blue);
+    --decoration-color: var(--blue);
+    --bg-col: var(--light-blue);
+}
