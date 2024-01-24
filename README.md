@@ -1,1 +1,0 @@
-# harikowshick.github.io
