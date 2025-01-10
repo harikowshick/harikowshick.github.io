@@ -1,0 +1,14 @@
+.content-paper {
+    position: relative;
+    background-color: var(--bg-col);
+    z-index: 3;
+    padding: 0 1rem;
+    padding-top: 4rem;
+    align-self: stretch;
+    overflow: auto;
+}
+
+.content-underlined {
+    text-decoration: 2px solid var(--blue);
+    text-underline-position: under;
+}

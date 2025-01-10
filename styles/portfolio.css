@@ -1,0 +1,51 @@
+.portfolio-content-grid {
+    padding-bottom: 4rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    grid-gap: 2rem;
+}
+
+.portfolio-content-grid a {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-content-grid a img {
+    max-height: 60vh;
+    max-width: 100%;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-content-grid a:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-content-grid a::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Slide-in Overlay Effect */
+.portfolio-content-grid a:hover::after {
+    opacity: 1;
+}

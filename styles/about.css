@@ -1,0 +1,118 @@
+.about-content-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+}
+
+section.chapter,
+section.intro .intro-summary {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 1rem;
+}
+section.intro {
+    overflow: visible;
+    margin-right: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 4rem;
+    align-items: center;
+    padding: 2rem 0;
+}
+section.intro::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 7.5rem;
+    border-radius: .6rem;
+    background-color: var(--blue);
+    height: 100%;
+    width: calc(100% - 7.5rem);
+    z-index: -1;
+}
+
+section.intro .intro-thumbnail {
+    display: block;
+    width: 15rem;
+    height: 25rem;
+    border-radius: 5%;
+    background-image: url(../assets/imgs/IMG_9068\ copy.jpg);
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22); /* Shadow effect */
+    transition: box-shadow 0.3s ease-in-out;
+    
+}
+
+section.intro .intro-summary {
+    padding-right: 1rem;
+    overflow: visible;
+}
+
+section.intro .intro-summary h1 {
+    font-size: 3em;
+}
+section.intro .intro-summary a {    
+    text-decoration: none;
+    margin-right: 1rem;
+    justify-self: end;
+}
+section.intro .intro-summary button {
+    width: fit-content;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--cta);
+    color: var(--cta);
+    background-color: white;
+    border-radius: 0;
+    position: relative;
+    top: 100%;
+}
+section.intro .intro-summary button svg {
+    margin-right: 1rem;
+}
+section.intro .intro-summary button svg path {
+    fill: var(--cta);
+}
+section.chapter h2 {
+    margin-bottom: 1.5rem;
+}
+section.chapter .line-bullet-points {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-rows: max-content;
+}
+
+@media screen and (max-width: 666px) { /* We're all sinners! */
+    section.intro {
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        column-gap: 4rem;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+    section.intro::before {
+        content: initial;
+    }
+    section.intro .intro-thumbnail {
+        margin: auto
+    }
+    section.intro .intro-summary {
+        padding-right: 0;
+    }
+    section.intro .intro-summary h1 {
+        text-align: center;
+    }
+    section.intro .intro-summary button {
+        top: 0;
+    }
+}
